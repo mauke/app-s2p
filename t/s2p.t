@@ -703,6 +703,25 @@ x
 [TheEnd]
 },
 
+### s3 ### GH #5
+'s3' => {
+  script => <<'[TheEnd]',
+s/\</(/g
+s/\>/)/g
+[TheEnd]
+  input  => 'text',
+  expect => <<'[TheEnd]',
+(line) (1)
+(line) (2)
+(line) (3)
+(line) (4)
+(line) (5)
+(line) (6)
+(line) (7)
+(line) (8)
+[TheEnd]
+},
+
 ### t ###
 't' => {
   script => join( "\n",
